@@ -13,7 +13,8 @@ var collection = database.GetCollection("users")
 var ctx = context.Background()
 
 func Create(user m.User) error {
-
+	user.CreatedAt = time.Now()
+	user.UpdatedAt = time.Now()
 	var err error
 	_, err = collection.InsertOne(ctx, user)
 	if err != nil {
@@ -44,7 +45,6 @@ func Read() (m.Users, error) {
 }
 
 func Update(user m.User, userID string) error {
-
 	var err error
 	uid, _ := primitive.ObjectIDFromHex(userID)
 	filter := bson.M{"_id": uid}

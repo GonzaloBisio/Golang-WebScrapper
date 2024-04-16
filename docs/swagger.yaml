@@ -1,0 +1,9 @@
+basePath: /api
+host: localhost:8888
+info:
+  contact: {}
+  description: A tag service with swagger integration
+  title: Tag Service Api
+  version: "1.0"
+paths: {}
+swagger: "2.0"
