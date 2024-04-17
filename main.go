@@ -15,5 +15,4 @@ import (
 func main() {
 	r := gin.Default()        // Create a new gin.Engine instance
 	router.SetupUserRoutes(r) // Pass the gin.Engine instance to SetupUserRoutes
-	r.Run(":8080")
 }

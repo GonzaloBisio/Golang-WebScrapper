@@ -1,4 +1,4 @@
-package controllers
+package user_controller
 
 import (
 	"Golang/models"
